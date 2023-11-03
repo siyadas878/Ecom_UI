@@ -1,8 +1,5 @@
-import 'package:clothi/manager/color_manager.dart';
 import 'package:clothi/manager/route_manager.dart';
-import 'package:clothi/presentation/screens/add_product_screen/add_product_screen.dart';
-import 'package:clothi/presentation/screens/home_screen/home_screen.dart';
-import 'package:clothi/presentation/screens/splash_screen/splash_screen.dart';
+import 'package:clothi/presentation/screens/nav_bar/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,8 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
-      home:  AddProductScreen(),
-      initialRoute: '/AddProductScreen',
+      home:  NavBar(),
+      initialRoute: '/NavBar',
       getPages: appRoutes(),
     );
   }

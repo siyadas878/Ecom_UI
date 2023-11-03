@@ -2,6 +2,7 @@ import 'package:clothi/presentation/screens/add_product_screen/add_product_scree
 import 'package:clothi/presentation/screens/created_screen/created_screen.dart';
 import 'package:clothi/presentation/screens/home_screen/home_screen.dart';
 import 'package:clothi/presentation/screens/login_screen/login_screen.dart';
+import 'package:clothi/presentation/screens/nav_bar/nav_bar.dart';
 import 'package:clothi/presentation/screens/otp_screen/otp_screen.dart';
 import 'package:clothi/presentation/screens/product_screen/product_screen.dart';
 import 'package:clothi/presentation/screens/register_screen/register_screen.dart';
@@ -17,6 +18,7 @@ List<GetPage> appRoutes() {
     GetPage(name: '/LoginScreen', page: () => const LoginScreen()),
     GetPage(name: '/HomeScreen', page: () => const HomeScreen()),
     GetPage(name: '/ProductScreen', page: () => const ProductScreen()),
-    GetPage(name: '/AddProductScreen', page: () =>  AddProductScreen())
+    GetPage(name: '/AddProductScreen', page: () =>  AddProductScreen()),
+    GetPage(name: '/NavBar', page: () =>  NavBar())
   ];
 }
