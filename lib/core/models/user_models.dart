@@ -8,12 +8,14 @@ class UserModel {
     if (name == '' || name == null) {
       return 'Please Enter Name';
     }
+    return null;
   }
 
   String? validatePhoneNumber() {
     if (phoneNumber == '' || phoneNumber == null) {
       return 'Please Enter phone number';
     }
+    return null;
   }
 
   String? validateEmail() {
@@ -25,6 +27,7 @@ else    if (
             .hasMatch(email!)) {
           return 'Enter valid email';
             }
+    return null;
   
   }
 
@@ -32,5 +35,6 @@ else    if (
     if (password == null || password == '') {
       return 'Please enter Passord';
     }
+    return null;
   }
 }

@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
-      home:  NavBar(),
-      initialRoute: '/NavBar',
+      home: const NavBar(),
+      initialRoute: '/',
       getPages: appRoutes(),
     );
   }

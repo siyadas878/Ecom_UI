@@ -41,6 +41,9 @@ class EditProductScreen extends StatelessWidget {
           discountsController: discountsController),
       const SalesWidget()
     ];
+    nameController.text='White Off Shoulder Top';
+    priceController.text='273.46';
+    idController.text='#74328';
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(

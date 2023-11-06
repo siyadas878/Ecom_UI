@@ -76,6 +76,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               } else if (widget.index == 3) {
                 return widget.userModel.validatePassword();
               }
+              return null;
             },
             decoration: InputDecoration(
                 contentPadding:

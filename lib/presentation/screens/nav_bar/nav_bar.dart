@@ -1,10 +1,10 @@
 import 'package:clothi/manager/color_manager.dart';
-import 'package:clothi/presentation/screens/category_screen/category_screen.dart';
 import 'package:clothi/presentation/screens/home_screen/home_screen.dart';
-import 'package:clothi/presentation/screens/product_screen/product_screen.dart';
+import 'package:clothi/presentation/screens/order_screen/order_screen.dart';
+import 'package:clothi/presentation/screens/product_category_screen/product_category_screen.dart';
+import 'package:clothi/presentation/screens/profile_screen/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 
 
 class NavBar extends StatefulWidget {
@@ -17,8 +17,8 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   int activeIndex = 0;
   List<Widget> pages = const[
-     HomeScreen(),ProductScreen(),
-    CategoryScreen(),ProductScreen()];
+     HomeScreen(),ProductCategoryScreen(),
+    OrderScreen(),ProfileScreen()];
 
 
   @override

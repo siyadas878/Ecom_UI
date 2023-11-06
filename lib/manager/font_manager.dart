@@ -8,6 +8,8 @@ class AppFonts {
       fontSize: 15, color: Colors.grey, fontWeight: FontWeight.w500);
   TextStyle f16wBoldBlack = const TextStyle(
       fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold);
+      TextStyle f16wBoldBluegrey = const TextStyle(
+      fontSize: 16, color: Colors.blueGrey, fontWeight: FontWeight.bold);
   TextStyle f16w500Black = const TextStyle(
       fontSize: 16, color: Colors.black, fontWeight: FontWeight.w500);
   TextStyle f16w500Amber = TextStyle(
