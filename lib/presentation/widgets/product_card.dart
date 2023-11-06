@@ -38,7 +38,7 @@ class _ProductCardState extends State<ProductCard> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
-                height: screenWidth(context) * 0.5,
+                height: screenWidth(context) * 0.44,
                 width: screenWidth(context) * 0.4,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),

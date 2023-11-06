@@ -21,7 +21,7 @@ class ProfileScreen extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.only(left: 12),
           child: BackCircle(back: () {
-            Get.back();
+            Get.toNamed('/NavBar');
           }),
         ),
         title: Text(

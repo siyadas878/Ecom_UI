@@ -1,4 +1,5 @@
 import 'package:clothi/manager/route_manager.dart';
+import 'package:clothi/presentation/screens/nav_bar/nav_bar.dart';
 import 'package:clothi/presentation/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
