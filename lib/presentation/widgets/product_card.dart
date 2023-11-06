@@ -1,4 +1,5 @@
 import 'package:clothi/manager/font_manager.dart';
+import 'package:clothi/manager/space_manager.dart';
 import 'package:clothi/utils/utility_dimension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -18,7 +19,6 @@ class _ProductCardState extends State<ProductCard> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     isFav = widget.isFav ?? false;
   }
@@ -28,24 +28,23 @@ class _ProductCardState extends State<ProductCard> {
     return Center(
       child: InkWell(
         onTap: () {
-          Get.toNamed("/productDetailsScreen");
+          Get.toNamed("/EditProductScreen");
         },
         child: SizedBox(
-          height: screenHeight(context) * 0.3,
+          // height: screenHeight(context) * 0.3,
           width: screenWidth(context) * 0.4,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
                 height: screenHeight(context) * 0.2,
-                width: screenWidth(context) * 0.35,
+                width: screenWidth(context) * 0.4,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     image: DecorationImage(
                         image: AssetImage(widget.image), fit: BoxFit.cover)),
                 child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Padding(
@@ -74,12 +73,17 @@ class _ProductCardState extends State<ProductCard> {
                   ],
                 ),
               ),
-              Text(
-                "White Off Shoulder Top",
-                style: appFonts.f13black,
+              appSpaces.spaceForHeight10,
+              SizedBox(
+                width: 150,
+                child: Text(
+                  "White Off Shoulder Top",
+                  style: appFonts.f13black,
+                ),
               ),
+              const SizedBox(height: 7,),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   const Icon(
                     Icons.star,
@@ -91,11 +95,12 @@ class _ProductCardState extends State<ProductCard> {
                   ),
                 ],
               ),
+              const SizedBox(height: 7,),
               Text(
                 "₹ 76.53",
-                style: appFonts.f13black,
+                style: appFonts.f15wboldblack,
               ),
-              Spacer()
+              const Spacer()
             ],
           ),
         ),

@@ -4,13 +4,13 @@ import 'package:clothi/utils/utility_dimension.dart';
 import 'package:flutter/material.dart';
 
 class SearchBarWidget extends StatelessWidget {
-  final IconData suffix;
+  final IconData? suffix;
   final Icon? prefix;
   final String hint;
   const SearchBarWidget({
     super.key,
      this.prefix,
-    required this.suffix,
+     this.suffix,
     required this.hint
   });
 

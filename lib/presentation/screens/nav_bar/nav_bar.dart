@@ -1,4 +1,5 @@
 import 'package:clothi/manager/color_manager.dart';
+import 'package:clothi/presentation/screens/category_screen/category_screen.dart';
 import 'package:clothi/presentation/screens/home_screen/home_screen.dart';
 import 'package:clothi/presentation/screens/product_screen/product_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,7 +18,7 @@ class _NavBarState extends State<NavBar> {
   int activeIndex = 0;
   List<Widget> pages = const[
      HomeScreen(),ProductScreen(),
-    HomeScreen(),ProductScreen()];
+    CategoryScreen(),ProductScreen()];
 
 
   @override
@@ -44,11 +45,11 @@ class _NavBarState extends State<NavBar> {
               label: ""
             ),
             BottomNavigationBarItem(
-                icon:Icon(CupertinoIcons.cart),
+                icon:Icon(CupertinoIcons.bag),
                 label: ""
                 ),
             BottomNavigationBarItem(
-                icon:Icon(CupertinoIcons.heart),
+                icon:Icon(CupertinoIcons.square_list),
                 label: ""
                 ),
             BottomNavigationBarItem(

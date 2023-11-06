@@ -5,6 +5,7 @@ import 'package:clothi/manager/space_manager.dart';
 import 'package:clothi/presentation/widgets/container_icon.dart';
 import 'package:clothi/presentation/widgets/search_bar_widget.dart';
 import 'package:clothi/utils/utility_dimension.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -33,13 +34,13 @@ class HomeScreen extends StatelessWidget {
             IconButton(
                 onPressed: () {},
                 icon: const Icon(
-                  FontAwesomeIcons.cartShopping,
+                  CupertinoIcons.cart,
                   color: Colors.black,
                 )),
             IconButton(
                 onPressed: () {},
                 icon:
-                    const Icon(FontAwesomeIcons.solidBell, color: Colors.black))
+                    const Icon(CupertinoIcons.bell, color: Colors.black))
           ],
         ),
         body: SafeArea(
