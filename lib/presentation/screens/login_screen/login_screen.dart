@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             CustomButton(onTap: () {
               if(formKey.currentState!.validate()){
-              Get.toNamed('/RoleSelect');
+              Get.toNamed('/NavBar');
               }
             }, title: 'Login'),
             appSpaces.spaceForHeight30,

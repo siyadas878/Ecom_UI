@@ -85,7 +85,7 @@ class OrderStepper extends StatelessWidget {
             onStepReached: (index) {}
     ),
           SizedBox(
-            width: screenWidth(context)*0.7,
+            width: screenWidth(context)*0.8,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
