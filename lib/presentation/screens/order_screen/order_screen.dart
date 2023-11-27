@@ -39,7 +39,7 @@ class _OrderScreenState extends State<OrderScreen> {
       body: SafeArea(
           child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal:15),
+          padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -80,78 +80,82 @@ class _OrderScreenState extends State<OrderScreen> {
                         child: FailedRow(),
                       ),
                     ),
-                    SizedBox(
-                  width: 150,
-                  child: DropdownButtonFormField(
-                    decoration: const InputDecoration(
-                        border:
-                            UnderlineInputBorder(borderSide: BorderSide.none)),
-                    hint: Text('All orders (${orders.length.toString()})',style: appFonts.f15wboldblack,),
-                    items: orderOptions
-                        .map((String item) => DropdownMenuItem<String>(
-                            value: item, child: Text(item)))
-                        .toList(),
-                    onChanged: (value) {},
+              SizedBox(
+                width: 150,
+                child: DropdownButtonFormField(
+                  decoration: const InputDecoration(
+                      border:
+                          UnderlineInputBorder(borderSide: BorderSide.none)),
+                  hint: Text(
+                    'All orders (${orders.length.toString()})',
+                    style: appFonts.f15wboldblack,
                   ),
-                              ),
+                  items: orderOptions
+                      .map((String item) => DropdownMenuItem<String>(
+                          value: item, child: Text(item)))
+                      .toList(),
+                  onChanged: (value) {},
+                ),
+              ),
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(7),
-                  border: Border.all(color: appColors.grey)
-                ),
+                    borderRadius: BorderRadius.circular(7),
+                    border: Border.all(color: appColors.grey)),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal:8.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      
-                              appSpaces.spaceForHeight20,
-                              Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Order ID',
-                      style: appFonts.f13grey,
-                    ),
-                    Text('Customer', style: appFonts.f13grey),
-                    Text('Payment Method', style: appFonts.f13grey),
-                    Text('Order Date', style: appFonts.f13grey),
-                  ],
-                              ),
-                              appSpaces.spaceForHeight10,
-                              const Divider(),
-                              SizedBox(
-                    height: screenHeight(context) * 0.5,
-                    child: ListView.separated(
-                        physics: const NeverScrollableScrollPhysics(),
-                        scrollDirection: Axis.vertical,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 3),
-                            child: InkWell(
-                              onTap: () {
-                                Get.toNamed('/OrderDetails');
-                              },
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    orders[index].id,
-                                    style: appFonts.f13bluegrey,
+                      appSpaces.spaceForHeight20,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Order ID',
+                            style: appFonts.f13grey,
+                          ),
+                          Text('Customer', style: appFonts.f13grey),
+                          Text('Payment Method', style: appFonts.f13grey),
+                          Text('Order Date', style: appFonts.f13grey),
+                        ],
+                      ),
+                      appSpaces.spaceForHeight10,
+                      const Divider(),
+                      SizedBox(
+                          height: screenHeight(context) * 2,
+                          child: ListView.separated(
+                              physics: const NeverScrollableScrollPhysics(),
+                              scrollDirection: Axis.vertical,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding:
+                                      const EdgeInsets.symmetric(vertical: 3),
+                                  child: InkWell(
+                                    onTap: () {
+                                      Get.toNamed('/OrderDetails');
+                                    },
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          orders[index].id,
+                                          style: appFonts.f13bluegrey,
+                                        ),
+                                        Text(orders[index].customer,
+                                            style: appFonts.f13black),
+                                        Text(orders[index].method,
+                                            style: appFonts.f13black),
+                                        Text(orders[index].date,
+                                            style: appFonts.f13black),
+                                      ],
+                                    ),
                                   ),
-                                  Text(orders[index].customer,
-                                      style: appFonts.f13black),
-                                  Text(orders[index].method,
-                                      style: appFonts.f13black),
-                                  Text(orders[index].date,
-                                      style: appFonts.f13black),
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                        separatorBuilder: (context, index) => const Divider(),
-                        itemCount: orders.length))
+                                );
+                              },
+                              separatorBuilder: (context, index) =>
+                                  const Divider(),
+                              itemCount: orders.length))
                     ],
                   ),
                 ),

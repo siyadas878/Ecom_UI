@@ -1,10 +1,13 @@
 import 'package:clothi/manager/route_manager.dart';
-import 'package:clothi/presentation/screens/nav_bar/nav_bar.dart';
 import 'package:clothi/presentation/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(const MyApp());
 }
 
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Clothi Ecommerce',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.white,
+        primarySwatch: Colors.amber,
       ),
       home: const SplashScreen(),
       initialRoute: '/',
